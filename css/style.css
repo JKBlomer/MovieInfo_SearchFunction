@@ -1,0 +1,23 @@
+.jumbotron{
+    margin-top: 20px;
+    height: 350px;
+    
+    
+}
+
+
+#movies img, #movie img {
+    width: 90%;
+    
+}
+
+@media(min-width:960px) {
+    
+#movies .col-md-3 .well {
+    height: 390px;
+}
+
+#movies .col-md-3 img {
+    height: 240px;
+}
+}
