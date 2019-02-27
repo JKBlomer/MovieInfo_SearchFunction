@@ -2,7 +2,7 @@ $(document).ready(() => {
     var test = sessionStorage.getItem("apiKey");
     if (test) {
         $("#searchKey").val(test);
-        console.log("test test; " + test);
+        console.log("key; " + test);
     } else {
         console.log("key is empty");
     }
@@ -23,7 +23,7 @@ function getMovies(sText) {
 
 
 
-    axios.get("http://www.omdbapi.com/?apikey=" + key + "&s=" + sText)
+    axios.get("https://www.omdbapi.com/?apikey=" + key + "&s=" + sText)
 
         .then((response) => {
             console.log(response);
@@ -75,7 +75,7 @@ function getMovie() {
     let movieID = sessionStorage.getItem("movieId");
     var key = sessionStorage.getItem("apiKey");
     console.log("movie id " + movieID)
-    axios.get("http://www.omdbapi.com/?&apikey=" + key + "&i=" + movieID)
+    axios.get("https://www.omdbapi.com/?&apikey=" + key + "&i=" + movieID)
 
         .then((response) => {
             console.log(response);
